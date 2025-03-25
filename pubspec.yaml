@@ -67,3 +67,16 @@ flutter:
   #
   # For details regarding fonts in packages, see
   # https://flutter.dev/custom-fonts/#from-packages
+  assets:
+    - android/
+    - android/src/
+    - android/src/main/
+    - android/src/main/res/
+    - android/src/main/res/layout/
+    - android/src/main/java/
+    - android/src/main/java/com/
+    - android/src/main/java/com/razorpay/
+    - android/src/main/java/com/razorpay/flutter_customui/
+    - android/gradle/
+    - android/gradle/wrapper/
+

@@ -120,7 +120,7 @@ public class RazorpayPlugin  implements FlutterPlugin, MethodCallHandler, Activi
         break;
 
       //Turbo UPI
-      case "linkNewUpiAccount":
+      /*case "linkNewUpiAccount":
         customerMobile = call.arguments.toString();
         razorpayDelegate.linkNewUpiAccount(customerMobile,result , this.eventSink);
         break;
@@ -168,9 +168,9 @@ public class RazorpayPlugin  implements FlutterPlugin, MethodCallHandler, Activi
       case "isTurboPluginAvailable":
          razorpayDelegate.isTurboPluginAvailable(result , this.eventSink);
          break;
-        /*
+        *//*
            Turbo TPV
-         */
+         *//*
       case "linkNewUpiAccountTPV":
         _arguments = call.arguments();
         String customerId = (String) _arguments.get("customerId");
@@ -190,7 +190,7 @@ public class RazorpayPlugin  implements FlutterPlugin, MethodCallHandler, Activi
       case "manageUpiAccounts":
         customerMobile = call.arguments.toString();
         razorpayDelegate.manageUpiAccounts(customerMobile, result , this.eventSink);
-        break;
+        break;*/
 
       default:
         Log.d(TAG,"no method");
@@ -221,7 +221,7 @@ public class RazorpayPlugin  implements FlutterPlugin, MethodCallHandler, Activi
     permissionResultListener = new PluginRegistry.RequestPermissionsResultListener() {
       @Override
       public boolean onRequestPermissionsResult(int requestCode, String[] permissions, int[] grantResults) {
-        razorpayDelegate.handlePermissionResult(requestCode, permissions, grantResults);
+        //razorpayDelegate.handlePermissionResult(requestCode, permissions, grantResults);
         return false;
       }
     };

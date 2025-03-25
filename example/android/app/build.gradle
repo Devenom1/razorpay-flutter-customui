@@ -1,3 +1,17 @@
+plugins {
+    id "com.android.application"
+    id 'dev.flutter.flutter-gradle-plugin'
+}
+
+repositories {
+    google()
+    maven { url "https://repo.grails.org/grails/core/" }
+    maven { url "https://groovy.jfrog.io/artifactory/libs-release/" } // added for http-builder
+    maven { url 'https://nexus.web.cern.ch/nexus/content/repositories/public/' }
+    maven { url "https://clojars.org/repo/" }
+    mavenCentral()
+}
+
 def localProperties = new Properties()
 def localPropertiesFile = rootProject.file('local.properties')
 if (localPropertiesFile.exists()) {
@@ -21,11 +35,12 @@ if (flutterVersionName == null) {
     flutterVersionName = '1.0'
 }
 
-apply plugin: 'com.android.application'
-apply from: "$flutterRoot/packages/flutter_tools/gradle/flutter.gradle"
+/*apply plugin: 'com.android.application'
+apply from: "$flutterRoot/packages/flutter_tools/gradle/flutter.gradle"*/
 
 android {
-    compileSdkVersion 31
+    namespace 'com.razorpay.flutter_customui_example'
+    compileSdkVersion 35
 
     defaultConfig {
         // TODO: Specify your own unique Application ID (https://developer.android.com/studio/build/application-id.html).

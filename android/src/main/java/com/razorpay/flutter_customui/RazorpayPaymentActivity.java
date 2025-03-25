@@ -9,7 +9,7 @@ import android.widget.RelativeLayout;
 import com.razorpay.PaymentResultWithDataListener;
 import com.razorpay.Razorpay;
 import com.razorpay.PaymentData;
-import com.razorpay.upi.UpiAccount;
+//import com.razorpay.upi.UpiAccount;
 
 import org.json.JSONObject;
 import android.content.Intent;
@@ -83,7 +83,7 @@ public class RazorpayPaymentActivity extends Activity implements PaymentResultWi
 
     private void sendRequest() {
         try {
-            if(payload.has(Constants.UPI_ACCOUNT)){
+            /*if(payload.has(Constants.UPI_ACCOUNT)){
                 String key  =  getAndRemoveKeyFromOptions(payload.getJSONObject("payload"));
                 razorpay.changeApiKey(key);
                 JSONObject newPayLoad =  payload.getJSONObject("payload");
@@ -94,7 +94,7 @@ public class RazorpayPaymentActivity extends Activity implements PaymentResultWi
                 payloadMap.put("payload", newPayLoad);
                 razorpay.submit(payloadMap, RazorpayPaymentActivity.this);
                 return;
-            }
+            }*/
             razorpay.submit(payload, RazorpayPaymentActivity.this);
         } catch(Exception e) {
             Log.e(TAG, "Failed to submit.", e);
